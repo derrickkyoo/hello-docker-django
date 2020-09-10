@@ -5,6 +5,14 @@
 
 {% block content %}
   <h1>Home</h1>
+  {% if user.is_authenticated %}
+    Hi, {{ user.email }}
+    <p><a href="{% url 'logout' %}">Log Out</a></p>
+  {% else %}
+    <p>You are not logged in</p>
+    <p><a href="{% url 'login' %}">Log In<a></p>
+  {% endif %}
+
   <img src="{% static "images/django_logo.png" %}" alt="">
   <img src="{% static "images/stupid_fun_science_logo.png" %}" alt="">
 {% endblock content %}
