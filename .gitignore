@@ -319,3 +319,4 @@ tags
 hello/media/
 
 .pytest_cache/
+.env
