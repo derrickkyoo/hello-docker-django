@@ -11,6 +11,7 @@
   {% else %}
     <p>You are not logged in</p>
     <p><a href="{% url 'login' %}">Log In<a></p>
+    <p><a href="{% url 'users:signup' %}">Sign Up<a></p>
   {% endif %}
 
   <img src="{% static "images/django_logo.png" %}" alt="">
